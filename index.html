@@ -1,5 +1,12 @@
-
-<!-- created by #mhneri (markhughneri.com) 02-Oct-2013 -->
+<!-- 
+	GWA Calculator by ASA-AdU
+	created by:
+	mark hugh neri (markhughneri.com) e-mail: mh.neri@gmail.com
+		
+	Updates:
+	02-Oct-2013	Initial release
+	03-Oct-2013 Added qualifications and improved layout	
+-->
 <!DOCTYPE html>
 <head>
 	<link href="css/bootstrap.min.css" rel="stylesheet" media="screen">
@@ -12,27 +19,29 @@
 	<meta property="og:site_name" content="ASA-AdU"/>
 	<meta property="article:author" content="http://markhughneri.com"/>
 	<meta property="og:image" content="http://gwa.asa-adu.com/logo.jpg"/>
-
 </head>
 
 <body>
 <div class="container-fluid">
 	<div class="span10">
-		<div class="page-header">
-			<h1><small>what's your</small> GWA?</h1>
-			
-			<a target="_blank" class="btn btn-info" href="http://www.facebook.com/sharer.php?u=http://gwa.asa-adu.com">SHARE</a>
-			
-			<a target="_blank" class="btn btn-primary" href="http://twitter.com/share?text=GWA Calculator via&url=http://gwa.asa-adu.com">TWEET</a>
+		<div id="main-head" class="page-header">
+			<div style="float:left">
+				<h1><small>what's your</small> GWA?</h1>
+			</div>
+			<div align="right">
+				<a target="_blank" class="btn btn-mini btn-info" href="http://www.facebook.com/sharer.php?u=http://gwa.asa-adu.com">SHARE</a>			
+				<a target="_blank" class="btn btn-mini btn-primary" href="http://twitter.com/share?text=GWA Calculator via&url=http://gwa.asa-adu.com">TWEET</a>			
+			</div>				
 		</div>
-	
 			
+		<div id="gwa"></div>
+	
 		<table class="table table-striped" id='grades'>
 			<tr>
 				<th>Subject</th>
 				<th>Units</th>
 				<th>Final Grade</th>
-			</tr>
+			</tr>													
 			<tr class='graderow'>
 				<td>Subject 1</td>
 				<td><input type='text' class='unit' /></td>
@@ -49,66 +58,63 @@
 				<td><input type='text' class='grade' /></td>			
 			</tr>
 		</table>
-		
-	
-		<div align="right">
-		<i class="icon-plus"></i> <input class="btn btn-inverse" type='button' id='btnAddRow' value='ADD SUBJECT' onClick='addRow()'></input>
+				
+		<div class="page-header">
+			<div align="left" style="float:left">
+				<input class="btn btn-success" type='button' id='btnSumUnits' value='WHAT IS MY GWA?' onClick='sumUnits()' />	
+			</div>
+			<div align="right">
+				<i class="icon-plus"></i> <input class="btn btn-inverse" type='button' id='btnAddRow' value='ADD SUBJECT' onClick='addRow()'></input>
+			</div>
 		</div>
-		<input class="btn btn-success" type='button' id='btnSumUnits' value='WHAT IS MY GWA?' onClick='sumUnits()' />		
-		
-		<div></div>
-		<div class="ads">
-			<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-			<ins class="adsbygoogle"
-				 style="display:inline-block;width:728px;height:90px"
-				 data-ad-client="ca-pub-9083850640594451"
-				 data-ad-slot="3163980430"></ins>
-			<script>
-			(adsbygoogle = window.adsbygoogle || []).push({});
-			</script>
-		</div>
-			
-		<div id="gwa" class="page-header">
-		<!-- disqus -->
-		</div>
-			<h3>Feedback</h3>
-		    <div id="disqus_thread"></div>
-				<script type="text/javascript">
-					/* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
-					var disqus_shortname = 'asaadu'; // required: replace example with your forum shortname
-
-					/* * * DON'T EDIT BELOW THIS LINE * * */
-					(function() {
-						var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
-						dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
-						(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-					})();
-				</script>
-				<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-				<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+					
+		<h3>Feedback</h3>
+		<div id="disqus_thread"></div>
+		<script type="text/javascript">
+			var disqus_shortname = 'asaadu'; // required: replace example with your forum shortname
+			(function() {
+				var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+				dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+				(document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+			})();
+		</script>
+		<noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+		<a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
 	</div>
 			
+	<!--sidebar-->
 	<div class="span2">
-	<br />
-	<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FASA.AdU&amp;width=320&amp;height=590&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=true&amp;show_border=true&amp;appId=188540291202397" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:292px; height:590px;" allowTransparency="true"></iframe>
+		<iframe src="http://www.facebook.com/plugins/likebox.php?href=https%3A%2F%2Fwww.facebook.com%2FASA.AdU&amp;width=300&amp;height=300&amp;colorscheme=light&amp;show_faces=true&amp;header=true&amp;stream=false&amp;show_border=true&amp;appId=188540291202397" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:300px; height:300px;" allowTransparency="true"></iframe>
+	
+		<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+			<ins class="adsbygoogle"
+				 style="display:inline-block;width:300px;height:250px"
+				 data-ad-client="ca-pub-9083850640594451"
+				 data-ad-slot="1968973752"></ins>
+		<script>
+			(adsbygoogle = window.adsbygoogle || []).push({});
+		</script>	
 	</div>
-
+	
 	<input type='hidden' id='subCount' value='4' />
 
 </div>
+
 	
-	<script>
-		function addRow(){					
-			$("#grades").append("<tr class='graderow'><td>Subject " + $("#subCount").val() + "</td><td><input type='text' class='unit' /></td><td><input type='text' class='grade' /></td>");
-			$("#subCount").val(+$("#subCount").val() + 1);
-		}
+<script>
+	function addRow(){					
+		$("#grades").append("<tr class='graderow'><td>Subject " + $("#subCount").val() + "</td><td><input type='text' class='unit' /></td><td><input type='text' class='grade' /></td>");
+		$("#subCount").val(+$("#subCount").val() + 1);
+	}
 
 	function sumUnits(){
 	
 		var tot_units = 0;
 		var tot_weight = 0;
-	
+		var grades = [];
+		
 		$("tr.graderow").each(function() {
+		
 			$this = $(this);
 						
 			var m_unit = $this.find("input.unit").val();
@@ -117,31 +123,61 @@
 			tot_weight = tot_weight + (m_unit * m_grade);
 			tot_units = +tot_units +  +m_unit;
 			
+			grades.push(m_grade);
 		});
 				
+		grades.sort(function(a,b) { return b - a } );		
+		var lg = +grades[0];		
 		var gwa = parseFloat(tot_weight) / parseFloat(tot_units);
-	
-		$("#gwa").html("<h1><small>Your GWA is</small> " + gwa.toFixed(4) + "</h1>");
+		var qualification;
+				
+		switch(true) {
+			case (gwa <= 1.24 && gwa >= 1.00): qualification = (lg<=1.5?100:(lg<=1.75?75:(lg<=2?50:0))); break;							
+			case (gwa <= 1.49 && gwa >= 1.25): qualification = (lg<=1.75?75:(lg<=2?50:0));break;											
+			case (gwa <= 1.69 && gwa >= 1.50): qualification = (lg<=2?50:0);break;			
+			default: qualification = 0;break;			
+		};
+			
+		if (!isNaN(gwa)) {		
+			if (qualification){			
+				$("#gwa").html("<h1><small>Your GWA is</small> " + gwa.toFixed(4) + "</h1><h4><small>and your lowest grade is <strong>" + lg.toFixed(2) + "</strong>. congrats! you qualify for <strong>" + qualification +   "%</strong> scholarship.</small></h4>");
+				$("#gwa").removeClass("alert-error");
+				$("#gwa").addClass("page-header alert alert-success");
+			} else {
+				$("#gwa").html("<h1><small>Your GWA is</small> " + gwa.toFixed(4) + "</h1><h4><small>sorry but you do not qualify for scholarship. your lowest grade is <strong>" + lg.toFixed(2) + "</strong></small></h4>");
+					$("#gwa").removeClass("alert-success");
+				$("#gwa").addClass("page-header alert alert-error");
+			}		
+		} else {
+			$("#gwa").html("<p>Please enter grades.</p>");
+			$("#gwa").addClass("page-header alert");			
+		}
+				
+		$("#gwa").show();
+		$('html, body').animate({ scrollTop: $('#main-head').offset().top }, 'slow');
 	}
-
+	
 </script>
 	
-	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
+<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+<script src="http://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
 
+<script async>
+	$("#gwa").hide();
+</script>
 	
-	<!--Analytics-->
-	<script>
-		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-		})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+<!--Analytics-->
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-		ga('create', 'UA-44525496-1', 'asa-adu.com');
-		ga('send', 'pageview');
-	</script>
-	
+	ga('create', 'UA-44525496-1', 'asa-adu.com');
+	ga('send', 'pageview');
+</script>
+
 </body>
 
 </html>
